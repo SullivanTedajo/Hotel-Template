@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>Hotel Template | Only with HTML, CSS, SCSS and Accessibility</title>
+</head>
+<body>
+
+    <!-- *****  START HEADER SECTION  ***** -->
+     <header class="header">
+        <nav class="header__nav">
+            <div class="header__items-list">
+                <a href="#" class="header__logo">
+                    <i class="bi bi-house-heart-fill header__icon"></i>
+                    Logo
+                </a>
+                <a href="#" class="header__item">
+                    Rooms
+                </a>
+                <a href="#" class="header__item">
+                    About
+                </a>
+                <a href="#" class="header__item">
+                    Contact
+                </a>
+            </div>
+            <a href="#" class="header__book-item">
+                Book Now
+            </a>
+        </nav>
+     </header>
+    <!-- *****  END HEADER SECTION  ***** -->
+
+
+    <!-- *****  START MAIN SECTION  ***** -->
+    <main class="main">
+
+          <!-- *****  START Heroes SECTION  ***** -->
+            <section class="heroes" aria-label="Heroes Section">
+                <form action="#" class="heroes__form" aria-labelledby="hotel-name">
+                    <div class="heroes__form-header">
+                        <h1 class="heroes__title" id="hotel-name">
+                        <i class="bi bi-house-heart-fill heroes__icon"></i>
+                            Hotel Name
+                        </h1>
+                    </div>
+                    <div class="heroes__form-body">
+                        <div class="heroes__form-items">
+                            <div class="heroes__form-item">
+                                <label for="date-in" class="heroes__label">
+                                    <i class="bi bi-calendar-event heroes__label-icon"></i>
+                                    Check In
+                                </label>
+                                <input type="date" class="heroes__control" id="date-in" placeholder="DD MM YYYY">
+                            </div>
+                            <div class="heroes__form-item">
+                                <label for="date-out" class="heroes__label">
+                                    <i class="bi bi-calendar-event heroes__label-icon"></i>
+                                    Check Out
+                                </label>
+                                <input type="date" class="heroes__control" id="date-out" placeholder="DD MM YYYY">
+                            </div>
+                            <div class="heroes__form-item">
+                                <label for="adults" class="heroes__label">
+                                    <i class="bi bi-person-standing heroes__label-icon"></i>
+                                    Adults
+                                </label>
+                                <input type="number" class="heroes__control" id="adults" placeholder="1" min="1">
+                            </div>
+                            <div class="heroes__form-item">
+                                <label for="kids" class="heroes__label">
+                                    <i class="bi bi-person-arms-up heroes__label-icon"></i>
+                                    Kids
+                                </label>
+                                <input type="number" class="heroes__control" id="kids" placeholder="0" min="0">
+                            </div>
+                        </div>
+                        <button class="heroes__submit">
+                            <i class="bi bi-search heroes__submit-icon"></i>
+                            Search availability
+                        </button>
+                    </div>
+                </form>
+            </section>
+          <!-- *****  END Heroes SECTION  ***** -->
+
+          <!-- *****  START Rooms SECTION  ***** -->
+           <section class="rooms" aria-labelledby="rooms-title">
+            <h2 class="rooms__title" id="rooms-title">Rooms</h2>
+            <p class="rooms__description">
+                Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.
+            </p>
+            <form action="#" class="rooms__form" aria-labelledby="rooms-title">
+                    <div class="rooms__form-items">
+                        <div class="rooms__form-item">
+                            <label for="rooms-date-in" class="rooms__label">
+                                <i class="bi bi-calendar-event rooms__label-icon"></i>
+                                Check In
+                            </label>
+                            <input type="date" class="rooms__control" id="rooms-date-in" placeholder="DD MM YYYY">
+                        </div>
+                        <div class="rooms__form-item">
+                            <label for="rooms-date-out" class="rooms__label">
+                                <i class="bi bi-calendar-event rooms__label-icon"></i>
+                                Check Out
+                            </label>
+                            <input type="date" class="rooms__control" id="rooms-date-out" placeholder="DD MM YYYY">
+                        </div>
+                        <div class="rooms__form-item">
+                            <label for="rooms-adults" class="rooms__label">
+                                <i class="bi bi-person-standing rooms__label-icon"></i>
+                                Adults
+                            </label>
+                            <input type="number" class="rooms__control" id="rooms-adults" placeholder="1" min="1">
+                        </div>
+                        <div class="rooms__form-item">
+                            <label for="rooms-kids" class="rooms__label">
+                                <i class="bi bi-person-arms-up rooms__label-icon"></i>
+                                Kids
+                            </label>
+                            <input type="number" class="rooms__control" id="rooms-kids" placeholder="0" min="0">
+                        </div>
+                        <div class="rooms__form-item">
+                            <label for="rooms-search" class="rooms__label">
+                                <i class="bi bi-search rooms__submit-icon"></i>
+                                Search
+                            </label>
+                            <button class="rooms__submit" id="rooms-search">
+                                Search 
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            <!-- Romms Items  -->
+             <div class="rooms__items-list">
+                <!-- Item 1  -->
+                 <div class="rooms__item">
+                    <img src="img/room_single.jpg" alt="A bedroom with a dressed bed and a coverd window" class="rooms__featured-img" width="486" height="324">
+                    <div class="rooms__body">
+                        <h3 class="rooms__item-title">Single Room</h3>
+                        <p class="rooms__item-price">From $99</p>
+                        <p class="rooms__item-rooms">Single bed</p>
+                        <p class="rooms__item-area">15m <sup class="rooms__item-area">2</sup></p>
+                        <div class="rooms__item-icons">
+                            <i class="bi bi-moisture rooms__label-icon"></i>
+                            <i class="bi bi-phone-fill rooms__label-icon"></i>
+                            <i class="bi bi-wifi rooms__label-icon"></i>  
+                        </div>
+                        <button class="rooms__button">Choose Room</button>
+                    </div>
+                 </div>
+                <!-- Item 2  -->
+                 <div class="rooms__item">
+                    <img src="img/room_double.jpg" alt="A Queen-size bedroom with a dressed bed and a coverd window and a TV" class="rooms__featured-img" width="486" height="324">
+                    <div class="rooms__body">
+                        <h3 class="rooms__item-title">Double Room</h3>
+                        <p class="rooms__item-price">From $149</p>
+                        <p class="rooms__item-rooms">Queen-size bed</p>
+                        <p class="rooms__item-area">25m <sup class="rooms__item-area">2</sup></p>
+                        <div class="rooms__item-icons">
+                            <i class="bi bi-moisture rooms__label-icon"></i>
+                            <i class="bi bi-phone-fill rooms__label-icon"></i>
+                            <i class="bi bi-wifi rooms__label-icon"></i>  
+                            <i class="bi bi-tv-fill rooms__label-icon"></i>  
+                        </div>
+                        <button class="rooms__button">Choose Room</button>
+                    </div>
+                 </div>
+                 <!-- Item 3  -->
+                  <div class="rooms__item">
+                     <img src="img/room_deluxe.jpg" alt="A King-size bedroom with a dressed bed and a coverd window and a TV and a mini-bar" class="rooms__featured-img" width="486" height="324">
+                     <div class="rooms__body">
+                         <h3 class="rooms__item-title">Deluxe Room</h3>
+                         <p class="rooms__item-price">From $199</p>
+                         <p class="rooms__item-rooms">king-size bed</p>
+                         <p class="rooms__item-area">40m <sup class="rooms__item-area">2</sup></p>
+                         <div class="rooms__item-icons">
+                             <i class="bi bi-moisture rooms__label-icon"></i>
+                             <i class="bi bi-phone-fill rooms__label-icon"></i>
+                             <i class="bi bi-wifi rooms__label-icon"></i>  
+                             <i class="bi bi-tv-fill rooms__label-icon"></i>  
+                             <i class="bi bi-cup-straw rooms__label-icon"></i>  
+                             <i class="bi bi-fork-knife rooms__label-icon"></i>  
+                         </div>
+                         <button class="rooms__button">Choose Room</button>
+                     </div>
+                  </div>
+             </div>
+             </div>
+           </section>
+          <!-- *****  END Rooms SECTION  ***** -->
+
+          <!-- *****  START About SECTION  ***** -->
+           <section class="about" aria-labelledby="about-title">
+            <div class="about__description-section">
+                <div class="about__description-block">
+                    <h2 class="about__title" id="about-title">About</h2>
+                    <p class="about__description">
+                        Our hotel is one of a kind. It is truely amazing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                    <p class="about__description">
+                        We accept : 
+                        <i class="bi bi-credit-card about__icon"></i>
+                        <i class="bi bi-credit-card-2-back-fill about__icon"></i>
+                        <i class="bi bi-credit-card-2-front about__icon"></i>
+                        <i class="bi bi-credit-card-fill about__icon"></i>
+                    </p>
+                </div>
+                    <img src="img/map.jpg" alt="An intersection of many roads" class="about__featured-img" width="987" height="556">
+            </div>
+            <div class="about__contact">
+                <div class="about__address">
+                    <i class="bi bi-geo-alt-fill about__contact-icon"></i>
+                    423 Some adr, Chicago, US
+                </div>
+                <div class="about__address">
+                    <i class="bi bi-telephone-fill about__contact-icon"></i>
+                    Phone: +00 151515
+                </div>
+                <div class="about__address">
+                    <i class="bi bi-envelope-at-fill about__contact-icon"></i>
+                     Email: mail@mail.com
+                </div>
+            </div>
+           </section>
+          <!-- *****  END About SECTION  ***** -->
+
+          <!-- *****  START Info SECTION  ***** -->
+          <div class="info__info">
+                <i class="bi bi-info-lg info__icon-info"></i>
+                <p class="info__info-description">On demand, we can offer playstation, babycall, children care, dog equipment, etc.</p>
+          </div>
+          <!-- *****  END Info SECTION  ***** -->
+
+
+          <!-- *****  START Hotels SECTION  ***** -->
+           <section class="hotels" aria-labelledby="hotels-title">
+            <h2 class="hotels__title" id="hotels-title">Our Hotels</h2>
+            <p class="hotels__description">You can find our hotels anywhere in the world:</p>
+            <div class="hotels__float">
+                <div class="hotels__float-left">
+                    <div class="hotels__image">
+                        <img src="img/cinqueterre.jpg" alt="A dreaming place at Cinque Terre " class="hotels__featured-img" width="736" height="560">
+                        <span class="hotels__img-text">Cinque Terre</span>
+                    </div>
+                </div>
+                <div class="hotels__float-right">
+                    <div class="hotels__image">
+                        <img src="img/newyork2.jpg" alt="Liberty statute" class="hotels__featured-img" width="360" height="270">
+                        <span class="hotels__img-text">New York</span>
+                    </div>
+                    <div class="hotels__image">
+                        <img src="img/sanfran.jpg" alt="San Francisco bridge" class="hotels__featured-img" width="360" height="270">
+                        <span class="hotels__img-text">San Francisco</span>
+                    </div>
+                    <div class="hotels__image">
+                        <img src="img/pisa.jpg" alt="Pisa Tower" class="hotels__featured-img" width="360" height="270">
+                        <span class="hotels__img-text">Pisa</span>
+                    </div>
+                    <div class="hotels__image">
+                        <img src="img/paris.jpg" alt="Eiffel Tower" class="hotels__featured-img" width="360" height="270">
+                        <span class="hotels__img-text">Paris</span>
+                    </div>
+                </div>
+            </div>
+           </section>
+          <!-- *****  END Hotels SECTION  ***** -->
+
+          <!-- *****  START Newsletter SECTION  ***** -->
+           <section class="newsletter" aria-labelledby="newsletter-title">
+            <h2 class="newsletter__title" id="newsletter-title">Get the best offers first!</h2>
+            <p class="newsletter__description">Join our newsletter.</p>
+            <form action="#" method="GET" class="newsletter__form" aria-labelledby="newsletter__title">
+                <label for="email-id" class="newsletter__label">E-mail</label>
+                <input type="email" class="newsletter__control" placeholder="Your Email address" id="email-id" name="mail" autocomplete="email">
+                <button type="submit" class="newsletter__button">Subscribe</button>
+            </form>
+           </section>
+          <!-- *****  END Newsletter SECTION  ***** -->
+
+          <!-- *****  START Contact SECTION  ***** -->
+           <section class="contact" aria-labelledby="contact-title">
+            <h2 class="contact__title" id="contact-title">Contact</h2>
+            <p class="contact__description">If you have any questions, do not hesitate to ask them.</p>
+              <div class="contact__items">
+                <div class="contact__address">
+                    <i class="bi bi-geo-alt-fill contact__contact-icon"></i>
+                    423 Some adr, Chicago, US
+                </div>
+                <div class="contact__address">
+                    <i class="bi bi-telephone-fill contact__contact-icon"></i>
+                    Phone: +00 151515
+                </div>
+                <div class="contact__address">
+                    <i class="bi bi-envelope-at-fill contact__contact-icon"></i>
+                     Email: mail@mail.com
+                </div>
+            </div>
+            <form action="#" method="GET" class="contact__form" aria-labelledby="contact-title">
+                <div class="contact__form-container">
+                    <input type="text" class="contact__form-control" placeholder="Name" autocomplete="name">
+                    <input type="email" class="contact__form-control" placeholder="Email" autocomplete="email">
+                    <textarea class="contact__form-control" name="message" id="message" cols="10" rows="1" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="contact__button">Send Message</button>
+            </form>
+           </section>
+          <!-- *****  END Contact SECTION  ***** -->
+
+
+
+    </main>
+    <!-- *****  END MAIN SECTION  ***** -->
+
+
+    <!-- *****  START FOOTER SECTION  ***** -->
+     <section class="footer">
+        <p  class="footer__description">Find us on</p>
+        <div class="footer__socials">
+            <i class="bi bi-facebook footer__icon"></i>
+            <i class="bi bi-instagram footer__icon"></i>
+            <i class="bi bi-tiktok footer__icon"></i>
+            <i class="bi bi-pinterest footer__icon"></i>
+            <i class="bi bi-twitter-x footer__icon"></i>
+            <i class="bi bi-linkedin footer__icon"></i>
+        </div>
+        <span class="footer__copyright">
+            Powered by 
+            <a href="https://github.com/SullivanTedajo/" class="footer__link">LEKEMO Sullivan</a>
+        </span>
+    </section>
+    <!-- *****  END FOOTER SECTION  ***** -->
+
+
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+@forward '../globals';
+@forward '../util';
+
+.hotels{
+    margin-bottom: 2em;
+
+    &__title{
+        @extend %section-title;
+    }
+
+    &__float{
+        display: flex;
+        gap: 1em;
+    }
+    &__float-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+    }
+    
+    &__image{
+        position: relative;
+    }
+    &__img-text{
+        position: absolute;
+        bottom: .7em;
+        left: .7em;
+        color: var(--white-color);
+    }
+}
+
+// MOBILE VERSION 
+
+@media only screen and (max-width: 37.5em){
+    .hotels{
+
+        &__float{
+            display: block;
+        }
+        &__float-right{
+            display: block;
+        }
+        &__featured-img{
+            margin-bottom: 1em;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

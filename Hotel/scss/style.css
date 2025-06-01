@@ -1,0 +1,420 @@
+/* --- ******  PARAMETRAGE DES ELEMENTS GLOBAUX DU SITE  ****** --- */
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  font-size: 10px;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+button, input, textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  background-color: var(--light-gray);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+  --white-color: #fff;
+  --black-color:#000;
+  --light-gray: #F1F1F1;
+  --gray-color: #CCCCCC;
+  --heavy-gray-color:#616161;
+  --background-color:#F5F7F8;
+  --primary-color: #F44336;
+  --primary-hover: #FF5722;
+}
+
+.header__item, .header__book-item, .header__logo {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: var(--black-color);
+  padding: 1em;
+  margin: 0;
+}
+.header__item:hover, .header__book-item:hover, .header__logo:hover {
+  background-color: var(--gray-color);
+  cursor: pointer;
+}
+
+.newsletter__label, .rooms__label, .heroes__label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.contact__form-control, .newsletter__control, .rooms__control, .heroes__control {
+  width: 100%;
+  border: solid 0.081em rgba(0, 0, 0, 0.1333333333);
+  padding: 1.3em;
+  margin-bottom: 0.8em;
+}
+.contact__form-control::-webkit-calendar-picker-indicator, .newsletter__control::-webkit-calendar-picker-indicator, .rooms__control::-webkit-calendar-picker-indicator, .heroes__control::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+.heroes__submit, .contact__button, .newsletter__button, .rooms__submit, .rooms__button {
+  padding: 0.9em;
+  background-color: var(--heavy-gray-color);
+  color: var(--white-color);
+  border: none;
+  font-size: 1em;
+}
+.heroes__submit:hover, .contact__button:hover, .newsletter__button:hover, .rooms__submit:hover, .rooms__button:hover {
+  cursor: pointer;
+  color: var(--black-color);
+  background-color: var(--gray-color);
+}
+
+.contact__button, .newsletter__button, .rooms__submit, .rooms__button {
+  width: 100%;
+  background-color: var(--black-color);
+  padding: 0.9em;
+  font-size: 0.8em;
+}
+
+.hotels__title, .about__title, .rooms__title {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+.header {
+  max-width: 100em;
+}
+.header__nav {
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__items-list {
+  padding: 0;
+  margin: 0;
+}
+.header__item {
+  color: var(--black-color);
+}
+.header__book-item {
+  background-color: var(--light-gray);
+}
+.header__logo {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.header__logo:hover {
+  color: var(--black-color);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header__nav {
+    display: block;
+  }
+  .header__item, .header__logo, .header__book-item {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
+.main {
+  width: 100%;
+  max-width: 140em;
+  margin-inline: auto;
+  position: relative;
+  padding: 0 0.8em;
+  margin: 0;
+}
+
+.heroes {
+  position: relative;
+  padding: 0 1em;
+  margin-bottom: 2em;
+  height: 100vh;
+  background: center/cover no-repeat url("../img/hotel.jpg");
+}
+.heroes__form {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  transform: translateY(-50%);
+}
+.heroes__form-header {
+  padding: 0.9em;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+.heroes__title {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin: 0;
+}
+.heroes__form-body {
+  padding: 1em;
+  background-color: var(--white-color);
+}
+.heroes__form-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+.heroes__form-item {
+  margin-bottom: 1em;
+}
+@media only screen and (max-width: 37.5em) {
+  .heroes {
+    padding-block: 3em;
+    height: auto;
+  }
+  .heroes__form {
+    position: relative;
+    top: 0;
+    width: 100%;
+    transform: translateY(0);
+  }
+  .heroes__form-items {
+    display: block;
+  }
+}
+.rooms {
+  margin-bottom: 2em;
+}
+.rooms__form {
+  margin-block: 1.2em;
+}
+.rooms__form-items {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+  gap: 1em;
+  justify-content: space-between;
+}
+.rooms__items-list {
+  display: flex;
+  gap: 1em;
+}
+.rooms__item {
+  margin-bottom: 1em;
+}
+.rooms__body {
+  background-color: var(--white-color);
+  padding: 1em;
+}
+.rooms__item-title {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.rooms__item-price {
+  opacity: 0.5;
+}
+.rooms__item-rooms, .rooms__item-area {
+  font-size: 0.9em;
+  font-weight: 200;
+}
+.rooms__item-icons {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+@media only screen and (max-width: 37.5em) {
+  .rooms__form-items {
+    display: block;
+  }
+  .rooms__items-list {
+    display: block;
+  }
+}
+.about {
+  margin-bottom: 2em;
+}
+.about__description-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1em;
+}
+.about__description {
+  line-height: 1.5;
+  font-size: 1.1em;
+}
+.about__contact {
+  padding: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+.about__address {
+  font-size: 1.2em;
+}
+.about__contact-icon {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about__description-section {
+    display: block;
+  }
+  .about__featured-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .about__contact {
+    display: block;
+  }
+  .about__address {
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+}
+.info__info {
+  margin-bottom: 2em;
+  display: flex;
+  gap: 1.2em;
+  align-items: center;
+  padding: 2em 0.8em;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-left: 0.5em solid var(--gray-color);
+}
+.info__icon-info {
+  padding: 0.5em;
+  background-color: var(--primary-hover);
+}
+.info__info-description {
+  margin: 0;
+}
+
+.hotels {
+  margin-bottom: 2em;
+}
+.hotels__float {
+  display: flex;
+  gap: 1em;
+}
+.hotels__float-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+.hotels__image {
+  position: relative;
+}
+.hotels__img-text {
+  position: absolute;
+  bottom: 0.7em;
+  left: 0.7em;
+  color: var(--white-color);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .hotels__float {
+    display: block;
+  }
+  .hotels__float-right {
+    display: block;
+  }
+  .hotels__featured-img {
+    margin-bottom: 1em;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+.newsletter {
+  opacity: 0.5;
+  margin-bottom: 2em;
+  color: var(--white-color);
+  padding: 2.5em 1em;
+  background-color: var(--black-color);
+}
+.newsletter__title {
+  font-size: 1.6em;
+  font-weight: 300;
+  color: var(--white-color);
+}
+.newsletter__control {
+  margin-bottom: 1.2em;
+}
+.newsletter__button {
+  background-color: var(--primary-color);
+  width: auto;
+}
+.newsletter:hover {
+  opacity: 1;
+}
+
+.contact {
+  margin-block: 2em;
+}
+.contact__title {
+  font-size: 1.6em;
+  font-weight: 300;
+  color: var(--black-color);
+}
+.contact__address {
+  margin-bottom: 0.5em;
+}
+.contact__contact-icon {
+  color: var(--primary-color);
+  padding-right: 1em;
+}
+.contact__form-container {
+  margin-top: 1.5em;
+}
+.contact__form-control {
+  padding-block: 1.8em;
+  margin-bottom: 1em;
+}
+.contact__form-control::-moz-placeholder {
+  font-size: 1.5em;
+}
+.contact__form-control::placeholder {
+  font-size: 1.5em;
+}
+.contact__button {
+  width: auto;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  padding: 2em;
+  text-align: center;
+}
+.footer__description {
+  font-size: 1.4em;
+  text-transform: capitalize;
+}
+.footer__socials {
+  margin-bottom: 1.4em;
+}
+.footer__link {
+  text-decoration: none;
+  text-color: var(--white-color);
+}
+.footer__link:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+@forward '../globals';
+@forward '../util';
+
+.footer{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 2em;
+    text-align: center;
+
+    &__description{
+        font-size: 1.4em;
+        text-transform: capitalize;
+
+    }
+
+    &__socials{
+        margin-bottom: 1.4em;
+    }
+    &__link{
+        text: {
+            decoration: none;
+            color: var(--white-color);
+        }
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

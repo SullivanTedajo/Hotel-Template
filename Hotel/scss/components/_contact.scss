@@ -1,0 +1,41 @@
+@forward '../globals';
+@forward '../util';
+
+.contact{
+    
+    margin-block: 2em;
+
+    &__title{
+        font: {
+            size: 1.6em;
+            weight: 300;
+        }
+        color: var(--black-color);
+    }
+    &__address{
+        margin-bottom: .5em;
+    }
+
+    &__contact-icon{
+        color: var(--primary-color);
+        padding-right: 1em;
+    }
+    &__form-container{
+        margin-top: 1.5em;
+    }
+
+    &__form-control{
+        @extend %form-control;
+        padding-block: 1.8em;
+        &::placeholder{
+            font-size: 1.5em;
+        }
+        margin-bottom: 1em;
+    }
+    &__button{
+        @extend %select-room;
+        width: auto;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+}

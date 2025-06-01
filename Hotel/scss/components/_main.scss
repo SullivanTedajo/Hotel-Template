@@ -1,0 +1,10 @@
+@forward '../globals';
+
+.main{
+    width: 100%;
+    max-width: 140em;
+    margin-inline: auto;
+    position: relative;
+    padding: 0 .8em;
+    margin: 0;
+}

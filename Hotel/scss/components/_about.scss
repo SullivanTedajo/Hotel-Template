@@ -1,0 +1,50 @@
+@forward '../globals';
+@forward '../util';
+
+.about{
+    margin-bottom: 2em;
+    &__description-section{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 1em;
+    }
+    &__title{
+        @extend %section-title;
+    }
+    &__description{
+        line-height: 1.5;
+        font-size: 1.1em;
+    }
+    &__contact{
+        padding: 2em;
+        display: flex;
+        justify-content: space-around;
+    }
+    &__address{
+        font-size: 1.2em;
+    }
+    &__contact-icon{
+        color: var(--primary-color);
+    }
+    
+}
+
+// MOBILE VERSION 
+
+@media only screen and (max-width: 37.5em){
+    .about{
+        &__description-section{
+            display: block;
+        }
+        &__featured-img{
+           object-fit: cover;
+        }
+        &__contact{
+            display: block;
+        }
+        &__address{
+            text-align: center;
+            margin-bottom: .5em;
+        }
+    }
+}

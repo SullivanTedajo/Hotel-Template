@@ -1,0 +1,68 @@
+@forward '../globals';
+
+%menu-item{
+    // line-height: normal;
+     text: {
+            decoration: none;
+            
+            transform: capitalize;
+        }
+        font: {
+            size: 1.1em;
+            weight: 400;
+        }
+        color: var(--black-color);
+        padding: 1em;
+        margin: 0;
+        &:hover{
+            background-color: var(--gray-color);
+            cursor: pointer;
+        }
+}
+
+%form-label{
+        display: block;
+        margin-bottom: .5em;
+        font: {
+            size: 1em;
+            weight: 300;
+        }
+        text: {
+            transform: capitalize;
+        }
+}
+%form-control{
+         width: 100%;
+        border: solid .081em #00000022;
+        padding: 1.3em ;
+        &::-webkit-calendar-picker-indicator{
+            opacity: 0;
+        }
+        margin-bottom: .8em;
+}
+%form-search{
+        padding: .9em;
+        background-color: var(--heavy-gray-color);
+        color: var(--white-color);
+        border: none;
+        font-size: 1em;
+        &:hover{
+            cursor: pointer;
+            color: var(--black-color);
+            background-color: var(--gray-color);
+        }
+}
+
+%select-room{
+    @extend %form-search;
+    width: 100%;
+    background-color: var(--black-color);
+    padding: .9em;
+    font-size: .8em;
+}
+%section-title{
+    font: {
+            size: 1.4em;
+            weight: 300;
+        }
+}

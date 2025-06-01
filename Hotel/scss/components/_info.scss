@@ -1,0 +1,24 @@
+@forward '../globals';
+@forward '../util';
+
+.info{
+    &__info{
+        margin-bottom: 2em;
+        display: flex;
+        gap: 1.2em;
+        align-items: center;
+        padding: 2em .8em;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        border-left:.5em solid var(--gray-color);
+        
+    }
+
+    &__icon-info{
+        padding: .5em;
+        background-color: var(--primary-hover);
+    }
+    &__info-description{
+        margin: 0;
+    }
+}

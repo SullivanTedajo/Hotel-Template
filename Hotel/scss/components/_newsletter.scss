@@ -1,0 +1,33 @@
+@forward '../globals';
+@forward '../util';
+
+.newsletter{
+    opacity: .5;
+    margin-bottom: 2em;
+    color: var(--white-color);
+    padding: 2.5em 1em;
+    background-color: var(--black-color);
+
+    &__title{
+        font: {
+            size: 1.6em;
+            weight: 300;
+        }
+        color: var(--white-color);
+    }
+    &__label{
+        @extend %form-label;
+    }
+    &__control{
+        @extend %form-control;
+        margin-bottom: 1.2em
+    }
+    &__button{
+        @extend %select-room;
+        background-color: var(--primary-color);
+        width: auto;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}

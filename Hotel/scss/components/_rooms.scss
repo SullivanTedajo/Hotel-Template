@@ -1,0 +1,79 @@
+@forward '../globals';
+@forward '../util';
+
+.rooms{
+    margin-bottom: 2em;
+    &__title{
+        @extend %section-title;
+    }
+
+    &__form{
+        margin-block: 1.2em;
+    }
+
+    &__form-items{
+        display: grid;
+        grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+        gap: 1em;
+        justify-content: space-between;
+    }
+
+    &__label{
+       @extend %form-label;
+    }
+    &__control{
+       @extend %form-control;
+    }
+    &__submit{
+        @extend %select-room;
+    }
+
+    // ITEMS 
+    &__items-list{
+        display: flex;
+        gap: 1em;
+    }
+    
+    &__item{
+        margin-bottom: 1em;
+    }
+
+    &__body{
+        background-color: var(--white-color);
+        padding: 1em;
+    }
+    &__item-title{
+        font: {
+            size: 1.2em;
+            weight: 400;
+        }
+    }
+    &__item-price{
+        opacity: .5;
+    }
+    &__item-rooms, &__item-area{
+        font: {
+            size: .9em;
+            weight: 200;
+        }
+    }
+    &__item-icons{
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+    &__button{
+        @extend %select-room;
+    }
+}
+
+// MOBILE FIRST 
+@media only screen and (max-width: 37.5em){
+    .rooms{
+        &__form-items{
+            display: block;
+        }
+        &__items-list{
+            display: block;
+        }
+    }
+}

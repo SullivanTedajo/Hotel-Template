@@ -1,0 +1,53 @@
+@forward '../globals';
+@forward '../util';
+
+
+.header{
+    max-width: 100em;
+
+    &__nav{
+        background-color: var(--white-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__items-list{
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item{
+        @extend %menu-item;
+        color: var(--black-color);
+    }
+    &__book-item{
+         @extend %menu-item;
+        background-color: var(--light-gray);
+        
+    }
+    &__logo{
+        @extend %menu-item;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        &:hover{
+            color: var(--black-color);
+        }
+    }
+}
+
+// MOBILE VERSION 
+
+@media only screen and (max-width: 37.5em){
+    .header{
+        &__nav {
+            display: block;
+        }
+        &__item, &__logo, &__book-item{
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+    }
+}

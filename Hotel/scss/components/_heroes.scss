@@ -1,0 +1,76 @@
+@forward '../globals';
+@forward '../util';
+
+.heroes{
+    position: relative;
+    padding: 0 1em;
+    margin-bottom: 2em;
+    height: 100vh;
+    background: center / cover no-repeat url('../img/hotel.jpg');  
+
+    &__form{
+        position: absolute;
+        top: 50%;
+        width: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__form-header{
+        padding: .9em;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+
+    &__title{
+        font: {
+            size: 1.5em;
+            weight: 500;
+        }
+        margin: 0;
+    }
+
+    &__form-body{
+        padding: 1em;
+        background-color: var(--white-color);
+    }
+    &__form-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1em;
+
+    }
+
+    &__form-item{
+        margin-bottom: 1em;
+    }
+
+    &__label{
+       @extend %form-label;
+    }
+
+    &__control{
+       @extend %form-control;
+    }
+
+    &__submit{
+        @extend %form-search;
+    }
+} 
+
+// MOBILE VERSION 
+@media only screen and (max-width :37.5em){
+    .heroes{
+        padding-block: 3em;
+        height: auto;
+        &__form{
+            position: relative;
+            top: 0;
+            width: 100%;
+            transform: translateY(0);
+        }
+
+        &__form-items{
+            display: block;
+        }
+    }
+}
